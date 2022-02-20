@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading;
 
 namespace robot
@@ -7,7 +8,12 @@ namespace robot
     {
         static void Main(string[] args)
         {
-            System.Diagnostics.Process.Start("http://google.com");
+            var ps = new ProcessStartInfo("http://google.com")
+            {
+                UseShellExecute = true,
+                Verb = "open"
+            };
+            Process.Start(ps);
         }
     }
 }
