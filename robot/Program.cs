@@ -7,11 +7,7 @@ namespace robot
     {
         static void Main(string[] args)
         {
-            while (true)
-            {
-                Console.WriteLine("Bloup");
-                Thread.Sleep(1000);
-            }
+            System.Diagnostics.Process.Start("http://google.com");
         }
     }
 }
